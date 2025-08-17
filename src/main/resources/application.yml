@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo_auth?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  # 32바이트(256bit) 이상 키로! (예시는 샘플, 실제로는 아래 '안전한 키 생성' 참고)
+  secret: "SLvscrY38FJ+OnauLdUXDdWOmscfukl+MfRuR8GaHDBDhLfxl+3xEMHHQ1LUPjezeIf+ZDTfng5oJemnoTwCGQ=="
+  expiration-ms: 3600000   # 1시간 = 3600 * 1000
