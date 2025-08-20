@@ -13,6 +13,9 @@ public class User {
     @Column(unique = true)
     private String username;
 
+    @Column
+    private long balance; // 가상머니
+
     @Column(nullable=false, length=100)
     private String email;
 
